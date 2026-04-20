@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProvider from "@/components/ui/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "AITEK Solutions | Technology Partner for Growing Businesses",
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-body">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

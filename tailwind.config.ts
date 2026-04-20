@@ -9,17 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: "#0A5EF5", light: "#3B82F6", dark: "#0943C7" },
-        secondary: "#00C2CB",
-        navy: "#0D1B2A",
-        "light-bg": "#F8FAFF",
+        primary: {
+          DEFAULT: "rgb(var(--color-primary) / <alpha-value>)",
+          light: "rgb(var(--color-primary-light) / <alpha-value>)",
+          dark: "rgb(var(--color-primary-dark) / <alpha-value>)",
+        },
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        navy: "rgb(var(--color-navy) / <alpha-value>)",
+        "light-bg": "rgb(var(--color-light-bg) / <alpha-value>)",
+        "text-primary": "rgb(var(--color-text-primary) / <alpha-value>)",
+        "text-muted": "rgb(var(--color-text-muted) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
       },
       fontFamily: {
         heading: ["Sora", "sans-serif"],
         body: ["DM Sans", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 4px 24px rgba(10, 94, 245, 0.08)",
+        soft: "0 4px 24px rgb(var(--color-primary) / 0.14)",
         card: "0 2px 16px rgba(0,0,0,0.06)",
       },
       animation: {

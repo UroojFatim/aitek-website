@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { 
-  Server, Code2, Cloud, ShieldCheck, Palette, 
-  TrendingUp, BarChart2, Headphones, LucideIcon 
+  Server, Code2, Cloud, ShieldCheck, Palette,
+  TrendingUp, Building2, BrainCircuit, Workflow,
+  MessageSquareMore, Factory, LucideIcon
 } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -13,8 +14,11 @@ const iconMap: Record<string, LucideIcon> = {
   ShieldCheck,
   Palette,
   TrendingUp,
-  BarChart2,
-  Headphones,
+  Building2,
+  BrainCircuit,
+  Workflow,
+  MessageSquareMore,
+  Factory,
 };
 
 interface ServiceCardProps {

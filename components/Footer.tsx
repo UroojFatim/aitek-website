@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Column 1: Logo & Info */}
           <div className="space-y-6">
             <Image
-              src="/lockup-horizontal-dark.png"
+              src="/lockup-horizontal-light.png"
               alt="AITEK Solutions"
               width={160}
               height={36}

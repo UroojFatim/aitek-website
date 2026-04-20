@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { navLinks, industries } from "@/lib/data";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -92,7 +93,8 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeSwitcher />
             <Link
               href="/contact"
               className="inline-flex items-center px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-dark transition-colors shadow-soft"
@@ -121,6 +123,9 @@ export default function Navbar() {
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-2">
+              <div className="mb-3 px-4">
+                <ThemeSwitcher mobile />
+              </div>
               {navLinks.map((link) => (
                 <div key={link.name}>
                   {link.hasDropdown ? (

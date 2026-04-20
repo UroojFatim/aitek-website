@@ -5,8 +5,9 @@ import Link from "next/link";
 import { 
   Stethoscope, Car, GraduationCap, Home, 
   ShoppingCart, Briefcase, ArrowRight, CheckCircle, 
-  Server, Code2, Cloud, ShieldCheck, Palette, 
-  TrendingUp, BarChart2, Headphones, LucideIcon 
+  Server, Code2, Cloud, ShieldCheck, Palette,
+  TrendingUp, Building2, BrainCircuit, Workflow,
+  MessageSquareMore, Factory, LucideIcon
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,7 +17,8 @@ import { industries, services } from "@/lib/data";
 
 const iconMap: Record<string, LucideIcon> = {
   Stethoscope, Car, GraduationCap, Home, ShoppingCart, Briefcase,
-  Server, Code2, Cloud, ShieldCheck, Palette, TrendingUp, BarChart2, Headphones,
+  Server, Code2, Cloud, ShieldCheck, Palette, TrendingUp,
+  Building2, BrainCircuit, Workflow, MessageSquareMore, Factory,
 };
 
 interface Props {
