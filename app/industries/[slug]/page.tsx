@@ -145,8 +145,8 @@ export default function IndustryPage({ params }: Props) {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-navy overflow-hidden">
-          <div className="absolute inset-0 opacity-25">
+        <section className="relative pt-32 pb-20 bg-light-bg overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
             <Image
               src={industry.image}
               alt={industry.name}
@@ -154,28 +154,28 @@ export default function IndustryPage({ params }: Props) {
               className="object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-light-bg/95 to-primary/10" />
 
-          <div className="absolute -top-16 -right-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-float" />
-          <div className="absolute bottom-0 -left-16 h-64 w-64 rounded-full bg-white/10 blur-3xl animate-float-delay" />
-          <div className="absolute top-1/3 left-1/2 h-48 w-48 rounded-full bg-primary/15 blur-2xl animate-float-delay-2" />
+          <div className="absolute -top-20 -left-24 h-80 w-80 rounded-full bg-primary/12 blur-3xl blob blob-delay-1" />
+          <div className="absolute top-12 -right-20 h-72 w-72 rounded-full bg-secondary/10 blur-3xl blob blob-delay-2" />
+          <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-primary/10 blur-3xl blob blob-delay-3" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <AnimatedSection className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-end">
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center backdrop-blur-sm">
+                  <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center">
                     <IconComponent className="h-6 w-6 text-primary" />
                   </div>
-                  <span className="text-primary font-medium">Industry Solutions</span>
+                  <span className="text-primary font-semibold">Industry Solutions</span>
                 </div>
 
-                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy mb-6 leading-tight">
                   {industry.name} Technology
-                  <span className="block text-primary-light">Built for Real Growth</span>
+                  <span className="block text-primary">Built for Real Growth</span>
                 </h1>
 
-                <p className="text-xl text-gray-300 max-w-2xl mb-8">
+                <p className="text-xl text-gray-600 max-w-2xl mb-8">
                   {industry.tagline}. We design and implement systems that solve the real blockers inside {industry.name.toLowerCase()} operations.
                 </p>
 
@@ -183,7 +183,7 @@ export default function IndustryPage({ params }: Props) {
                   {industry.challenges.map((challenge) => (
                     <span
                       key={challenge.title}
-                      className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-white/90 backdrop-blur-sm"
+                      className="px-4 py-2 rounded-full bg-white/85 border border-primary/20 text-sm text-navy shadow-sm"
                     >
                       {challenge.title}
                     </span>
@@ -195,10 +195,10 @@ export default function IndustryPage({ params }: Props) {
                 {impactMetrics.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md p-5"
+                    className="rounded-2xl border border-primary/20 bg-white/90 backdrop-blur-sm p-5 shadow-card"
                   >
-                    <p className="font-heading text-2xl text-white mb-1">{item.value}</p>
-                    <p className="text-sm text-gray-200">{item.label}</p>
+                    <p className="font-heading text-2xl text-navy mb-1">{item.value}</p>
+                    <p className="text-sm text-gray-600">{item.label}</p>
                   </div>
                 ))}
               </div>
